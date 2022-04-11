@@ -1,4 +1,5 @@
 package sample;
+//Karen og Birgir
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -33,7 +34,7 @@ public class Controller implements Initializable {
         userListView.setItems(passengers);
     }
 
-    public void listViewMouseClicked(MouseEvent mouseEvent){
+    public void listViewMouseClicked(MouseEvent mouseEvent) {
         Passenger selectedItem = (Passenger) userListView.getSelectionModel().getSelectedItem();
         usernameTextField.setText(selectedItem.getName());
         emailTextField.setText(selectedItem.getEmail());
@@ -42,10 +43,10 @@ public class Controller implements Initializable {
     }
 
 
-    private ObservableList<Trip> getReservedTrips(Passenger passenger){
+    private ObservableList<Trip> getReservedTrips(Passenger passenger) {
         ObservableList<Trip> reservedTrips = FXCollections.observableArrayList();
         ArrayList<Reservation> reservations = passenger.getReservations();
-        for(Reservation reservation: reservations){
+        for (Reservation reservation : reservations) {
             reservedTrips.add(reservation.getTrip()); //getTrip?
         }
         return reservedTrips;
