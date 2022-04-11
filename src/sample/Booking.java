@@ -1,4 +1,5 @@
 package sample;
+//Sigurður Arnar
 
 import java.util.UUID;
 
